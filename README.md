@@ -6,7 +6,7 @@
 
 This project is an end-to-end NLP analytics pipeline designed to ingest financial news, quantify sentiment using FinBERT, and correlate these signals with stock price movements.
 
-Developed for IS3107 (Data Engineering) at the National University of Singapore (NUS), this system addresses information overload in financial markets by converting unstructured text into structured, actionable insights. The pipeline automates the extraction of data from news APIs and Yahoo Finance, processes it using Spark and NLP models, and visualizes the results in an interactive dashboard.
+This system addresses information overload in financial markets by converting unstructured text into structured, actionable insights. The pipeline automates the extraction of data from news APIs and Yahoo Finance, processes it using Spark and NLP models, and visualizes the results in an interactive dashboard.
 
 ## System Architecture
 
