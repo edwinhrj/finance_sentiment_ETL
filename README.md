@@ -8,10 +8,6 @@ This project is an end-to-end NLP analytics pipeline designed to ingest financia
 
 This system addresses information overload in financial markets by converting unstructured text into structured, actionable insights. The pipeline automates the extraction of data from news APIs and Yahoo Finance, processes it using Spark and NLP models, and visualizes the results in an interactive dashboard.
 
-## System Architecture
-
-The system follows a modular ETL (Extract, Transform, Load) architecture orchestrated by Apache Airflow (running on Astronomer).
-
 ## Data Modelling
 ![telegram-cloud-photo-size-5-6107184414354771538-y](https://github.com/user-attachments/assets/6006794f-c1b8-4e2c-ba3d-02f6ecf85d8e)
 
@@ -27,7 +23,9 @@ ticker_article: Stores ticker-specific news linked to sentiment scores and daily
 
 sources: Tracks news publisher reliability and credibility ratings.
 
+## System Architecture
 
+The system follows a modular ETL (Extract, Transform, Load) architecture orchestrated by Apache Airflow (running on Astronomer).
 ### High-Level Data Flow
 
 #### Extraction:
