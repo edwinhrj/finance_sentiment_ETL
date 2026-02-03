@@ -15,6 +15,18 @@ The system follows a modular ETL (Extract, Transform, Load) architecture orchest
 ## Data Modelling
 ![telegram-cloud-photo-size-5-6107184414354771538-y](https://github.com/user-attachments/assets/6006794f-c1b8-4e2c-ba3d-02f6ecf85d8e)
 
+## 📊 Database Schema
+
+The project uses a normalized 3NF schema in PostgreSQL:
+
+tickers / sectors: Reference tables.
+
+sector_article: Stores raw news text, metadata, and impact scores for broad market news.
+
+ticker_article: Stores ticker-specific news linked to sentiment scores and daily price changes.
+
+sources: Tracks news publisher reliability and credibility ratings.
+
 
 ### High-Level Data Flow
 
@@ -57,22 +69,6 @@ A Streamlit dashboard provides interactive charts comparing sentiment trends aga
 - Docker
 
 Used by Astronomer to containerize the Airflow environment.
-
-## 📂 Project Structure
-
-.
-├── dags/
-│   └── financial_data_pipeline.py   # Main Airflow DAG
-├── include/
-│   ├── extract/                     # Python scripts for API extraction
-│   ├── spark_jobs/                  # PySpark cleaning & normalization scripts
-│   ├── transform/                   # FinBERT & Pandas transformation logic
-│   └── load/                        # Database loading scripts
-├── streamlit/
-│   └── app.py                       # Dashboard application
-├── Dockerfile                       # Astronomer Docker configuration
-├── packages.txt                     # OS-level dependencies
-└── requirements.txt                 # Python dependencies
 
 
 ## 🚀 Getting Started
@@ -118,16 +114,3 @@ To launch the visualization interface:
 cd streamlit
 pip install -r requirements.txt
 streamlit run app.py
-
-
-## 📊 Database Schema
-
-The project uses a normalized 3NF schema in PostgreSQL:
-
-tickers / sectors: Reference tables.
-
-sector_article: Stores raw news text, metadata, and impact scores for broad market news.
-
-ticker_article: Stores ticker-specific news linked to sentiment scores and daily price changes.
-
-sources: Tracks news publisher reliability and credibility ratings.
